@@ -52,7 +52,7 @@ class Create extends Component {
             priority: this.state.priority,
             completed: this.state.completed
         }
-        axios.post('http://localhost:3001/create', obj)
+        axios.post('https://evening-crag-07910.herokuapp.com/create', obj)
             .then(res => {
                 console.log(res.data);
             })

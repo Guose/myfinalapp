@@ -11,13 +11,13 @@ class List extends Component {
     }
 
     retrieve() {
-        axios.get('http://localhost:3001/list')
+        axios.get('https://evening-crag-07910.herokuapp.com/list')
         .then(res => {
             this.setState({todos: res.data});
         })
     }
     getSpecificTask(passId) {
-        axios.delete('http://localhost:3001/delete', {
+        axios.delete('https://evening-crag-07910.herokuapp.com/delete', {
             data: {
                 id: passId
             }
