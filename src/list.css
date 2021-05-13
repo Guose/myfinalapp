@@ -1,0 +1,140 @@
+input, #priority {
+    margin: 5px;
+    width: 200px;
+    height: 25px;
+}
+img {
+    width: 10%;
+    height: 10%;
+    padding: 15px;
+}
+label {
+    font-weight: bold;
+}
+.newTask, .taskList {
+    padding: 15px;
+}
+#btnForm {
+    color: white;
+    background-color: black;
+    height: 35px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.forms {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#appButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid blue;
+    width: 1500px;
+    height: 150px;
+}
+.link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid gray;
+}
+#headerForm {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-color: black;
+    width: 575px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+}
+#containerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid black;
+    width: 575px;
+    align-items: center;
+    background-color: rgb(201, 20, 20);
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    height: 700px;
+    border: 2px solid black
+}
+
+.button {
+    display: inline-block;
+    border-radius: 12px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 225px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+#title {
+    text-align: center;
+    font-family: arial, sans-serif;
+}
+#students {
+    text-align: center;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 3px solid #ddd;
+    width: 100%;
+}
+
+#students tr:nth-child(even){background-color: lightgray;}
+
+#students tr:hover {background-color: #ddd;}
+
+#students th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(201, 20, 20);
+    color: white;
+}
