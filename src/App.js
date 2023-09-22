@@ -9,17 +9,24 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className='link'>        
-          <img src={logo} alt='Check Box logo' />
-          <h1>Task App  </h1>
-          <div id='appButton'>            
-            <button className='button'><span><Link to='/list'>Tasks To Do</Link></span></button>
-            <button className='button'><span><Link to='/create'>New Task</Link></span></button>
+        <div className='link'>  
+          <div id='picture'>
+            <a href='/'><img src={logo} alt='Check Box logo'/></a>
+          </div>  
+          
+          <div id='title'>
+            <h1>Task App</h1> 
+            <div id='appButton'>
+              <button className='button'><span><Link to='/list'>Tasks To Do</Link></span></button>
+              <button className='button'><span><Link to='/create'>New Task</Link></span></button>
+            </div>
           </div>
+          
         </div>
         <Switch>
           <Route path='/list' exact component={List} />
           <Route path='/create' exact component={Create} />
+          {/* <Route path='/' exact component={App}/> */}
         </Switch>
       </Router>
     )
