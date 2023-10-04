@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 
-//const herokuServerUrl = 'https://evening-crag-07910.herokuapp.com/'
+const herokuServerUrl = 'https://evening-crag-07910.herokuapp.com/'
 const localServerUrl = 'http://localhost:3001/'
 
 
@@ -16,7 +16,7 @@ class List extends Component {
     }
 
     async retrieve() {
-        await axios.get(localServerUrl + 'list').then((res) => {
+        await axios.get(herokuServerUrl + 'list').then((res) => {
             const sortedTodos = [...res.data]
 
             // Sort the todos based on the 'done' property
@@ -45,7 +45,7 @@ class List extends Component {
 
     async updateDatabase(todo) {
         console.log('Id of myTodo: ', todo._id);
-        await axios.put(localServerUrl + 'update', {
+        await axios.put(herokuServerUrl + 'update', {
             data: todo
         }).then(res => {
             console.log('response.data: ', res.data);
@@ -57,7 +57,7 @@ class List extends Component {
     
 
     getSpecificTask(passId) {
-        axios.delete(localServerUrl + 'delete', {
+        axios.delete(herokuServerUrl + 'delete', {
             data: {
                 id: passId
             }
@@ -78,7 +78,7 @@ class List extends Component {
     }
 
     render() {
-        console.log("This.state: ", this.state);
+        console.log("This.state: ", this.state)
         const { todos } = this.state
         const todosList = todos.map((el, i) => {
             

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 //import { SchemaTypeOptions } from 'mongoose';
 
@@ -10,7 +9,7 @@ const options = [
     {label: 'Very High', value: 'very high'}
 ]
 
-//const herokuServerUrl = 'https://evening-crag-07910.herokuapp.com/'
+const herokuServerUrl = 'https://evening-crag-07910.herokuapp.com/'
 const localServerUrl = 'http://localhost:3001/'
 
 class Create extends Component {
@@ -46,7 +45,7 @@ class Create extends Component {
             completed: this.state.completed,
             done: false
         }
-        axios.post(localServerUrl + 'create', obj)
+        axios.post(herokuServerUrl + 'create', obj)
             .then((res) => {
                 console.log(res.data);
             }).then(() => {
@@ -85,4 +84,4 @@ class Create extends Component {
     }
 }
 
-export default withRouter(Create)
+export default Create
